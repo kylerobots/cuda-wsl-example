@@ -1,0 +1,22 @@
+{
+  "name": "PyTorch",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile",
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance"
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
+    "python.linting.pylintPath": "/usr/local/bin/pylint"
+  },
+  // This is critical for accessing the GPU.
+  "runArgs": [
+    "--gpus=all"
+  ]
+}
